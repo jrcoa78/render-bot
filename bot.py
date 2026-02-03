@@ -27,12 +27,77 @@ P2P_DIRECT = [
 ]
 
 # ───────── RUTAS MXN > A > B > MXN ─────────
-ROUTES = [  # ⬅️ SIN CAMBIOS
-    ("USDT","USDC"),("USDT","FDUSD"),("USDT","BTC"),("USDT","BNB"),
-    ("USDT","ETH"),("USDT","DOGE"),("USDT","WLD"),("USDT","ADA"),
-    ("USDT","XRP"),("USDT","TRUMP"),("USDT","1000CHEEMS"),
-    ("USDT","TST"),("USDT","SOL"),
-    # … (todas tus rutas intactas)
+ROUTES = [
+("USDT","USDC"),("USDT","FDUSD"),("USDT","BTC"),("USDT","BNB"),
+("USDT","ETH"),("USDT","DOGE"),("USDT","WLD"),("USDT","ADA"),
+("USDT","XRP"),("USDT","TRUMP"),("USDT","1000CHEEMS"),
+("USDT","TST"),("USDT","SOL"),
+
+("USDC","USDT"),("USDC","FDUSD"),("USDC","BTC"),("USDC","BNB"),
+("USDC","ETH"),("USDC","DOGE"),("USDC","WLD"),("USDC","ADA"),
+("USDC","XRP"),("USDC","TRUMP"),("USDC","1000CHEEMS"),
+("USDC","TST"),("USDC","SOL"),
+
+("FDUSD","USDT"),("FDUSD","USDC"),("FDUSD","BTC"),("FDUSD","BNB"),
+("FDUSD","ETH"),("FDUSD","DOGE"),("FDUSD","WLD"),("FDUSD","ADA"),
+("FDUSD","XRP"),("FDUSD","TRUMP"),("FDUSD","1000CHEEMS"),
+("FDUSD","TST"),("FDUSD","SOL"),
+
+("BTC","USDT"),("BTC","USDC"),("BTC","FDUSD"),("BTC","BNB"),
+("BTC","ETH"),("BTC","DOGE"),("BTC","WLD"),("BTC","ADA"),
+("BTC","XRP"),("BTC","TRUMP"),("BTC","1000CHEEMS"),
+("BTC","TST"),("BTC","SOL"),
+
+("BNB","USDT"),("BNB","USDC"),("BNB","FDUSD"),("BNB","BTC"),
+("BNB","ETH"),("BNB","DOGE"),("BNB","WLD"),("BNB","ADA"),
+("BNB","XRP"),("BNB","TRUMP"),("BNB","1000CHEEMS"),
+("BNB","TST"),("BNB","SOL"),
+
+("ETH","USDT"),("ETH","USDC"),("ETH","FDUSD"),("ETH","BTC"),
+("ETH","BNB"),("ETH","DOGE"),("ETH","WLD"),("ETH","ADA"),
+("ETH","XRP"),("ETH","TRUMP"),("ETH","1000CHEEMS"),
+("ETH","TST"),("ETH","SOL"),
+
+("DOGE","USDT"),("DOGE","USDC"),("DOGE","FDUSD"),("DOGE","BTC"),
+("DOGE","BNB"),("DOGE","ETH"),("DOGE","WLD"),("DOGE","ADA"),
+("DOGE","XRP"),("DOGE","TRUMP"),("DOGE","1000CHEEMS"),
+("DOGE","TST"),("DOGE","SOL"),
+
+("WLD","USDT"),("WLD","USDC"),("WLD","FDUSD"),("WLD","BTC"),
+("WLD","BNB"),("WLD","ETH"),("WLD","DOGE"),("WLD","ADA"),
+("WLD","XRP"),("WLD","TRUMP"),("WLD","1000CHEEMS"),
+("WLD","TST"),("WLD","SOL"),
+
+("ADA","USDT"),("ADA","USDC"),("ADA","FDUSD"),("ADA","BTC"),
+("ADA","BNB"),("ADA","ETH"),("ADA","DOGE"),("ADA","WLD"),
+("ADA","XRP"),("ADA","TRUMP"),("ADA","1000CHEEMS"),
+("ADA","TST"),("ADA","SOL"),
+
+("XRP","USDT"),("XRP","USDC"),("XRP","FDUSD"),("XRP","BTC"),
+("XRP","BNB"),("XRP","ETH"),("XRP","DOGE"),("XRP","WLD"),
+("XRP","ADA"),("XRP","TRUMP"),("XRP","1000CHEEMS"),
+("XRP","TST"),("XRP","SOL"),
+
+("TRUMP","USDT"),("TRUMP","USDC"),("TRUMP","FDUSD"),("TRUMP","BTC"),
+("TRUMP","BNB"),("TRUMP","ETH"),("TRUMP","DOGE"),("TRUMP","WLD"),
+("TRUMP","ADA"),("TRUMP","XRP"),("TRUMP","1000CHEEMS"),
+("TRUMP","TST"),("TRUMP","SOL"),
+
+("1000CHEEMS","USDT"),("1000CHEEMS","USDC"),("1000CHEEMS","FDUSD"),
+("1000CHEEMS","BTC"),("1000CHEEMS","BNB"),("1000CHEEMS","ETH"),
+("1000CHEEMS","DOGE"),("1000CHEEMS","WLD"),("1000CHEEMS","ADA"),
+("1000CHEEMS","XRP"),("1000CHEEMS","TRUMP"),("1000CHEEMS","TST"),
+("1000CHEEMS","SOL"),
+
+("TST","USDT"),("TST","USDC"),("TST","FDUSD"),("TST","BTC"),
+("TST","BNB"),("TST","ETH"),("TST","DOGE"),("TST","WLD"),
+("TST","ADA"),("TST","XRP"),("TST","TRUMP"),
+("TST","1000CHEEMS"),("TST","SOL"),
+
+("SOL","USDT"),("SOL","USDC"),("SOL","FDUSD"),("SOL","BTC"),
+("SOL","BNB"),("SOL","ETH"),("SOL","DOGE"),("SOL","WLD"),
+("SOL","ADA"),("SOL","XRP"),("SOL","TRUMP"),
+("SOL","1000CHEEMS"),("SOL","TST")
 ]
 
 # ───────── FUNCIONES ─────────
@@ -124,8 +189,9 @@ def main():
 
         except Exception as e:
             print("ERROR:", e)
-            send_telegram(f"⚠️ ERROR BOT: {e}")
+            # send_telegram(f"⚠️ ERROR BOT: {e}")
             time.sleep(30)
 
 if __name__ == "__main__":
     main()
+
