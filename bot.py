@@ -1,3 +1,10 @@
+# Este bot monitorea el mercado P2P de Binance MXN y detecta oprtunidades de arbitraje
+# enviando notificacion por telegram para avisar a operador la posibilidad e operar.
+#
+# https://github.com/jrcoa78
+# https://dashboard.render.com/
+#
+
 import requests
 import time
 import os
@@ -13,7 +20,7 @@ EXCLUDED_PAYMENTS = ["cashapp"]
 # ───────── TELEGRAM ─────────
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "8492035261:AAFXoAgOQIqZKY8tHLz1mb1tTkMWD56isKc")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "8383860413")
-ALERT_SPREAD = float(os.getenv("ALERT_SPREAD", 0.5))
+ALERT_SPREAD = float(os.getenv("ALERT_SPREAD", 0.6))
 
 # ───────── SESSION ─────────
 session = requests.Session()
